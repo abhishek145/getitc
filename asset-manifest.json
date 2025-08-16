@@ -1,17 +1,26 @@
 {
   "files": {
-    "main.css": "/getitc/static/css/main.9a1919fb.css",
-    "main.js": "/getitc/static/js/main.4a784eb9.js",
+    "main.css": "/getitc/static/css/main.1d281ea9.css",
+    "main.js": "/getitc/static/js/main.e23c3325.js",
     "static/js/453.e7b89929.chunk.js": "/getitc/static/js/453.e7b89929.chunk.js",
-    "static/media/bannerImge.jpg": "/getitc/static/media/bannerImge.b549c37c595e37054a20.jpg",
-    "static/media/woman-792162_1280.jpg": "/getitc/static/media/woman-792162_1280.bf7f2216c5b34fbba589.jpg",
+    "static/media/hexagon-6564551_1280.jpg": "/getitc/static/media/hexagon-6564551_1280.75cd8b2a74b73fd8258b.jpg",
+    "static/media/ball-63527_1280.jpg": "/getitc/static/media/ball-63527_1280.87d874786d97e0775279.jpg",
+    "static/media/business-7096914_1280.png": "/getitc/static/media/business-7096914_1280.d081ef2f8ffbc299d08b.png",
+    "static/media/compliance-5899191_1280.jpg": "/getitc/static/media/compliance-5899191_1280.e89121fd146110a0c6bc.jpg",
+    "static/media/man-5899192_1280.jpg": "/getitc/static/media/man-5899192_1280.2cbd47afae259745fa56.jpg",
+    "static/media/man-76202_1280.jpg": "/getitc/static/media/man-76202_1280.25ed60f22161db12fb21.jpg",
+    "static/media/conflict-of-interest-7727331_1280.png": "/getitc/static/media/conflict-of-interest-7727331_1280.afa3a1d161ad42662ab5.png",
+    "static/media/hand-1248053_1280.jpg": "/getitc/static/media/hand-1248053_1280.d72ee564575aad5d90d3.jpg",
+    "static/media/hands-5655424_1280.png": "/getitc/static/media/hands-5655424_1280.f43beb30b910d5922afc.png",
+    "static/media/physics-3873118_1280.jpg": "/getitc/static/media/physics-3873118_1280.6b400dd09f8c4c7f213f.jpg",
+    "static/media/business-7047158_1280.png": "/getitc/static/media/business-7047158_1280.ea3cc003e4e090aead67.png",
     "index.html": "/getitc/index.html",
-    "main.9a1919fb.css.map": "/getitc/static/css/main.9a1919fb.css.map",
-    "main.4a784eb9.js.map": "/getitc/static/js/main.4a784eb9.js.map",
+    "main.1d281ea9.css.map": "/getitc/static/css/main.1d281ea9.css.map",
+    "main.e23c3325.js.map": "/getitc/static/js/main.e23c3325.js.map",
     "453.e7b89929.chunk.js.map": "/getitc/static/js/453.e7b89929.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9a1919fb.css",
-    "static/js/main.4a784eb9.js"
+    "static/css/main.1d281ea9.css",
+    "static/js/main.e23c3325.js"
   ]
 }
