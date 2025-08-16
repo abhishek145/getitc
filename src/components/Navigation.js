@@ -7,7 +7,7 @@ export default function Navigation() {
   const navigate = useNavigate();
 
   const menuItems = [
-    { name: "Home", path: "/" },
+    { name: "Home", path: "/home" },
     { name: "About", path: "/about" },
     { name: "Contact", path: "/contact" },
   ];
@@ -17,7 +17,7 @@ export default function Navigation() {
       <div className="flex justify-between items-center h-16 px-6 md:px-12">
         {/* Logo */}
         <motion.h1
-        onClick={() => navigate("/")}
+        onClick={() => navigate("/home")}
         className="text-1xl md:text-2xl font-extrabold cursor-pointer tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-green-500"
        
       >

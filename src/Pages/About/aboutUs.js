@@ -1,8 +1,8 @@
 import React from "react";
-import aboutHero from "../../assets/woman-792162_1280.jpg";
-import complianceImg from "../../assets/woman-792162_1280.jpg";
-import processImg from "../../assets/woman-792162_1280.jpg";
-import trustImg from "../../assets/woman-792162_1280.jpg";
+import aboutHero from "../../assets/hexagon-6564551_1280.jpg";
+import complianceImg from "../../assets/business-7096914_1280.png";
+import processImg from "../../assets/physics-3873118_1280.jpg";
+import trustImg from "../../assets/hands-5655424_1280.png";
 
 const About = () => {
   return (

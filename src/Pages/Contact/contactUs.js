@@ -1,8 +1,8 @@
 import React, { useEffect, useRef } from "react";
-import about1 from "../../assets/woman-792162_1280.jpg";
-import about2 from "../../assets/woman-792162_1280.jpg";
-import about3 from "../../assets/woman-792162_1280.jpg";
-import contactImage from "../../assets/woman-792162_1280.jpg";
+import about1 from "../../assets/compliance-5899191_1280.jpg";
+import about2 from "../../assets/physics-3873118_1280.jpg";
+import about3 from "../../assets/hand-1248053_1280.jpg";
+import contactImage from "../../assets/business-7047158_1280.png";
 import { useLocation } from "react-router-dom";
 
 const AboutPage = () => {
