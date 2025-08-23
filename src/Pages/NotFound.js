@@ -12,7 +12,7 @@ export default function NotFound() {
         Oops! The page you’re looking for doesn’t exist.
       </p>
       <button
-        onClick={() => navigate("/home")}
+        onClick={() => navigate("/")}
         className="px-6 py-3 bg-blue-500 text-white rounded-md text-lg font-medium hover:bg-blue-600 transition"
       >
         Go Home

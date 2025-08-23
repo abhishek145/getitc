@@ -1,4 +1,3 @@
-
 import './App.css';
 import { Routes, Route } from 'react-router-dom';
 import Home from './Pages/Home/home';
@@ -7,6 +6,7 @@ import About from './Pages/About/aboutUs';
 import Contact from './Pages/Contact/contactUs';
 import NotFound from './Pages/NotFound';
 import ScrollToTop from './components/ScrollTotop';
+
 function App() {
   return (
     <div className="App">
@@ -15,7 +15,7 @@ function App() {
         <Navigation />
       </div>
       <Routes>
-        <Route path="/home" element={<Home />} />
+        <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="*" element={<NotFound />} />
