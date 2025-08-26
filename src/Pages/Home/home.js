@@ -5,8 +5,33 @@ import aboutImage from "../../assets/man-5899192_1280.jpg";
 import compliance1 from "../../assets/conflict-of-interest-7727331_1280.png";
 import compliance2 from "../../assets/ball-63527_1280.jpg";
 import compliance3 from "../../assets/man-76202_1280.jpg";
-
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 export default function Home() {
+  const [openIndex, setOpenIndex] = useState(null);
+  const navigate = useNavigate();
+  const faqs = [
+    {
+      q: "What is ADA compliance for websites?",
+      a: "ADA (Americans with Disabilities Act) compliance means ensuring your website is accessible to people with disabilities—such as those with visual, hearing, or mobility impairments—so they can use your site without barriers."
+    },
+    {
+      q: "Is ADA compliance required by law in Minnesota?",
+      a: "Yes. Both federal ADA requirements and Minnesota state accessibility standards apply to websites, especially for businesses and organizations that serve the public."
+    },
+    {
+      q: "What are the risks of not being ADA compliant?",
+      a: "Non-compliance can lead to lawsuits, fines, or formal complaints. Beyond legal risks, you may also lose potential customers who can’t access your website."
+    },
+    {
+      q: "How does ADA compliance benefit my business?",
+      a: "It increases your reach, builds trust, improves search engine visibility (SEO), and creates a better user experience for all visitors."
+    },
+    {
+      q: "Does ADA compliance only matter for government websites?",
+      a: "No. While government and public-sector websites are held to strict standards, private businesses in Minnesota are also subject to accessibility laws and can face lawsuits if not compliant."
+    }
+  ];
   const cards = [
     { id: 1, title: "Regulatory compliance", desc: "Being a state enforced regulation, being compliant with the latest regulations helps your business avoid a civil liability and improve consumer faith.", img: compliance1 },
     { id: 2, title: "Data protection", desc: "Ensure latest WCAG regulations for your website and ongoing improvements with secure workflows.", img: compliance2 },
@@ -17,75 +42,94 @@ export default function Home() {
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <div className="max-w-7xl mx-auto px-6 lg:px-12 py-16 grid md:grid-cols-2 gap-12 items-center overflow-hidden">
-        {/* Left Content */}
-        <motion.div
-          initial={{ opacity: 0, x: -50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8 }}
-        >
-          <p className="text-green-700 font-semibold text-sm tracking-wide uppercase mb-3">
-          Welcome To Get Into Compliance
-          </p>
-          <h1 className="text-4xl md:text-4xl font-bold text-gray-900 leading-tight mb-6">
-          Making Websites<br/> Accessible for Everyone
-          </h1>
-          <p className="text-gray-600 mb-8">
-          We help businesses make their websites accessible to ALL.
-         </p>
-          <div className="flex gap-4 flex-wrap mb-10">
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="px-6 py-3 rounded-md bg-green-700 text-white font-medium hover:bg-green-800 transition"
-            >
-              Get your Free website accessibility check
+      <div className="relative overflow-hidden bg-gradient-to-br from-green-50 via-white to-sky-50">
+  {/* Multiple Small Animated Gradient Circles */}
+  {[
+    { top: "10%", left: "8%", size: 90, color: "emerald-400/30", glow: "rgba(16,185,129,0.25)" },
+    { top: "20%", right: "15%", size: 70, color: "sky-400/30", glow: "rgba(56,189,248,0.25)" },
+    { bottom: "20%", left: "25%", size: 100, color: "teal-400/30", glow: "rgba(45,212,191,0.25)" },
+    { top: "50%", left: "40%", size: 60, color: "amber-400/30", glow: "rgba(251,191,36,0.25)" },
+    { bottom: "15%", right: "20%", size: 80, color: "emerald-300/30", glow: "rgba(134,239,172,0.25)" },
+  ].map((circle, i) => (
+    <motion.div
+      key={i}
+      className={`absolute rounded-full border ${circle.color}`}
+      style={{
+        width: circle.size,
+        height: circle.size,
+        top: circle.top,
+        left: circle.left,
+        right: circle.right,
+        bottom: circle.bottom,
+        boxShadow: `0 0 25px ${circle.glow}`,
+      }}
+      animate={{
+        y: [0, -15, 0],
+        x: [0, 10, 0],
+        scale: [1, 1.1, 1],
+        opacity: [0.6, 0.9, 0.6],
+      }}
+      transition={{
+        duration: 6 + i * 2,
+        repeat: Infinity,
+        repeatType: "mirror",
+        ease: "easeInOut",
+      }}
+    />
+  ))}
 
-            </motion.button>
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="px-6 py-3 rounded-md border border-gray-300 text-gray-700 font-medium hover:bg-gray-100 transition"
-            >
-              Learn More →
-            </motion.button>
-          </div>
-        </motion.div>
+  {/* Main Content */}
+  <div className="relative max-w-7xl mx-auto px-6 lg:px-12 py-20 grid md:grid-cols-2 gap-12 items-center">
+    {/* Left Content */}
+    <motion.div
+      initial={{ opacity: 0, x: -50 }}
+      animate={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.8 }}
+    >
+      <p className="text-green-600 font-semibold text-sm tracking-wide uppercase mb-3">
+        Welcome To Get Into Compliance
+      </p>
+      <h1 className="text-5xl md:text-6xl font-extrabold bg-gradient-to-r from-emerald-600 via-teal-500 to-sky-600 bg-clip-text text-transparent leading-tight mb-6">
+        Making Websites <br /> Accessible for Everyone
+      </h1>
+      <p className="text-gray-700 mb-8 text-lg">
+        We help businesses make their websites accessible to{" "}
+        <span className="font-semibold text-emerald-600">ALL.</span>
+      </p>
 
-        {/* Right Content */}
-        <motion.div
-          className="relative flex justify-center"
-          initial={{ opacity: 0, x: 50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-        >
-          <motion.img
-            src={heroImage}
-            alt="Hero"
-            className="rounded-2xl shadow-lg object-cover w-full max-w-lg md:max-w-full"
-            whileHover={{ scale: 1.03 }}
-            transition={{ type: "spring", stiffness: 200 }}
-          />
+      <motion.button
+        onClick={() => navigate("/contact", { state: { scrollToContact: true } })}
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
+        className="px-6 py-3 rounded-md bg-gradient-to-r from-emerald-600 via-teal-500 to-sky-600 text-white font-medium shadow-md hover:shadow-lg transition"
+      >
+        Get your Free website accessibility check
+      </motion.button>
+    </motion.div>
 
-          {/* <motion.div
-            className="absolute bottom-[-20px] left-1/6 transform -translate-x-1/8 md:left-1/2 md:translate-x-1/2 bg-green-100 rounded-xl shadow-lg p-5 w-72 md:w-64"
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.4 }}
-            whileHover={{ scale: 1.05 }}
-          >
-            <p className="text-xs text-gray-500 mb-2">Compliance Status</p>
-            <h3 className="text-lg font-bold text-gray-900">Audit Ready</h3>
-            <p className="text-2xl font-bold text-gray-800">✔ Fully Compliant</p>
-            <p className="text-sm text-green-600 mb-4">Updated Today</p>
-            <ul className="text-sm text-gray-700 space-y-2">
-              <li className="flex justify-between"><span>📝 Reports Generated</span> <span>12</span></li>
-              <li className="flex justify-between"><span>🔒 Data Secured</span> <span>100%</span></li>
-              <li className="flex justify-between"><span>⚖️ Compliance Checks</span> <span>Passed</span></li>
-            </ul>
-          </motion.div> */}
-        </motion.div>
+    {/* Right Content */}
+    <motion.div
+      className="relative flex justify-center"
+      initial={{ opacity: 0, x: 50 }}
+      animate={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.8, delay: 0.2 }}
+    >
+      <div className="relative">
+        <motion.img
+          src={heroImage}
+          alt="Hero"
+          className="rounded-2xl shadow-2xl object-cover w-full max-w-lg md:max-w-full"
+          whileHover={{ scale: 1.05 }}
+          transition={{ type: "spring", stiffness: 200 }}
+        />
       </div>
+    </motion.div>
+  </div>
+</div>
+
+
+
+
 
       {/* About & Mission */}
       <div className="bg-white py-16 px-6 lg:px-12 max-w-7xl mx-auto">
@@ -155,7 +199,7 @@ export default function Home() {
           viewport={{ once: true }}
           transition={{ duration: 1 }}
         >
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-800">Expert Get Into Compliance Attorneys</h1>
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-800"> Identify and Improve          </h1>
           <p className="mt-4 text-lg text-gray-600">Helping businesses stay compliant, protect data, and streamline reporting.</p>
         </motion.div>
         <div className="grid md:grid-cols-3 gap-10">
@@ -190,10 +234,23 @@ export default function Home() {
         </motion.div>
         <div className="grid md:grid-cols-3 gap-10">
           {[
-            { title: "Showcase inclusivity", desc: "Help build a more accessible internet while improving the digital experience for millions.", icon: "🛠️" },
-            { title: "Reach untapped markets", desc: "An accessible website opens the door to over $8 trillion in disposable income worldwide.", icon: "📡" },
-            { title: "Elevate your brand", desc: "Accessibility highlights your commitment to leadership and values, strengthening reputation with every interaction.", icon: "🔒" },
-          ].map((feature, i) => (
+  { 
+    title: "Showcase inclusivity", 
+    desc: "Help build a more accessible internet while improving the digital experience for millions.", 
+    icon: "🌍" // globe for inclusivity 
+  },
+  { 
+    title: "Reach untapped markets", 
+    desc: "An accessible website opens the door to over $8 trillion in disposable income worldwide.", 
+    icon: "📈" // chart growth for markets
+  },
+  { 
+    title: "Elevate your brand", 
+    desc: "Accessibility highlights your commitment to leadership and values, strengthening reputation with every interaction.", 
+    icon: "⭐" // star for brand/reputation
+  },
+]
+.map((feature, i) => (
             <motion.div
               key={i}
               className="bg-white rounded-2xl shadow-lg p-6 hover:shadow-2xl transition text-center"
@@ -313,20 +370,31 @@ export default function Home() {
       </div> */}
 
       {/* Newsletter / Contact CTA */}
-      <div className="bg-green-700 py-16 px-6 lg:px-12 text-white text-center rounded-xl max-w-7xl mx-auto mt-16">
-        <h2 className="text-3xl md:text-4xl font-bold mb-4">Stay Updated on Compliance</h2>
-        <p className="mb-6">Subscribe to receive the latest updates, tips, and compliance alerts.</p>
-        <div className="flex justify-center gap-4 flex-wrap">
-          <input
-            type="email"
-            placeholder="Enter your email"
-            className="px-4 py-2 rounded-md text-gray-800 w-64 max-w-full"
-          />
-          <button className="px-6 py-2 rounded-md bg-white text-green-700 font-semibold hover:bg-gray-100 transition">
-            Subscribe
-          </button>
-        </div>
+   
+
+      <section className="px-6 md:px-16 py-12 bg-gray-50">
+  <h2 className="text-3xl font-bold text-center mb-8">FAQs</h2>
+  <div className="max-w-3xl mx-auto space-y-4">
+    {faqs.map((faq, i) => (
+      <div
+        key={i}
+        className="bg-white rounded-xl shadow-md p-4"
+      >
+        <button
+          onClick={() => setOpenIndex(openIndex === i ? null : i)}
+          className="w-full flex justify-between items-center text-left font-medium text-gray-800"
+        >
+          {faq.q}
+          <span>{openIndex === i ? "−" : "+"}</span>
+        </button>
+        {openIndex === i && (
+          <p className="mt-2 text-gray-600 text-left">{faq.a}</p>
+        )}
       </div>
+    ))}
+  </div>
+</section>
+
     </div>
   );
 }
