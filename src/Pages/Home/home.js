@@ -133,62 +133,56 @@ export default function Home() {
 
       {/* About & Mission */}
       <div className="bg-white py-16 px-6 lg:px-12 max-w-7xl mx-auto">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div>
-            <motion.img
-              src={aboutImage}
-              alt="About Compliance"
-              className="rounded-2xl shadow-lg mb-6 w-full"
-              initial={{ opacity: 0, x: -100 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 1 }}
-            />
-            {/* <motion.div
-              className="bg-teal-800 text-white p-6 rounded-2xl shadow-md"
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 1, delay: 0.3 }}
-            >
-              <p className="text-xs uppercase tracking-wider font-semibold mb-2">Our Mission</p>
-              <p className="text-lg leading-relaxed">
-                Empower businesses to stay compliant, protect data, and automate reporting with reliable tools.
-              </p>
-            </motion.div> */}
-          </div>
+  <div className="grid md:grid-cols-2 gap-12 items-center">
+    
+    {/* Text first on mobile, left on desktop */}
+    <motion.div
+      className="order-1 md:order-2" // <-- key change
+      initial={{ opacity: 0, x: 100 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 1 }}
+    >
+      <h2 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight mb-6">
+        Avoid lawsuits with a compliant, user-friendly website
+      </h2>
+      <p className="text-gray-600 mb-4">
+        Accessibility lawsuits are rapidly increasing, making compliance more important than ever. Protect your business by scanning your website today to uncover its accessibility status and take the first step toward reducing risk and building inclusivity.
+      </p>
+      
+      <div className="grid grid-cols-2 gap-4">
+        {["Automation", "Security", "Accuracy", "Transparency", "Efficiency"].map((value, i) => (
           <motion.div
-            initial={{ opacity: 0, x: 100 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            key={i}
+            className="flex items-center gap-2 text-gray-800"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 1 }}
+            transition={{ duration: 0.5, delay: 0.2 * i }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight mb-6">Avoid lawsuits with a compliant, user-friendly website
-
-</h2>
-            <p className="text-gray-600 mb-4">
-            Accessibility lawsuits are rapidly increasing, making compliance more important than ever. Protect your business by scanning your website today to uncover its accessibility status and take the first step toward reducing risk and building inclusivity.
-
-            </p>
-           
-            <div className="grid grid-cols-2 gap-4">
-              {["Automation", "Security", "Accuracy", "Transparency", "Efficiency"].map((value, i) => (
-                <motion.div
-                  key={i}
-                  className="flex items-center gap-2 text-gray-800"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: 0.2 * i }}
-                >
-                  <span className="text-green-600 text-lg">✔</span>
-                  <span>{value}</span>
-                </motion.div>
-              ))}
-            </div>
+            <span className="text-green-600 text-lg">✔</span>
+            <span>{value}</span>
           </motion.div>
-        </div>
+        ))}
       </div>
+    </motion.div>
+
+    {/* Image after text on mobile */}
+    <div className="order-2 md:order-1">  {/* <-- key change */}
+      <motion.img
+        src={aboutImage}
+        alt="About Compliance"
+        className="rounded-2xl shadow-lg mb-6 w-full"
+        initial={{ opacity: 0, x: -100 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 1 }}
+      />
+    </div>
+
+  </div>
+</div>
+
 
       {/* Compliance Cards */}
       <div className="px-6 md:px-16 py-12">
