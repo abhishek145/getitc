@@ -3,40 +3,75 @@ import aboutHero from "../../assets/hexagon-6564551_1280.jpg";
 import complianceImg from "../../assets/business-7096914_1280.png";
 import processImg from "../../assets/physics-3873118_1280.jpg";
 import trustImg from "../../assets/hands-5655424_1280.png";
+import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 const About = () => {
+  const navigate = useNavigate();
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <section className="max-w-7xl mx-auto px-6 lg:px-12 py-16 grid md:grid-cols-2 gap-12 items-center">
-        {/* Left Content */}
-        <div>
-          <p className="text-green-700 font-semibold text-sm tracking-wide uppercase mb-3">
-            About Us
-          </p>
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-6">
-            Compliance Made Simple, <br /> Secure, and Reliable
-          </h1>
-          <p className="text-gray-600 mb-8 text-lg">
-            We help businesses navigate the complex world of regulatory
-            compliance with technology-driven solutions. From data protection to
-            financial regulations, our platform ensures you stay compliant,
-            avoid risks, and build trust with your customers.
-          </p>
-          <button className="px-6 py-3 rounded-md bg-green-700 text-white font-medium hover:bg-green-800 transition">
-            Learn More
-          </button>
-        </div>
+      <section className="w-full py-20 bg-gradient-to-b from-red-100 via-pink-100 to-white">
+  <div className="max-w-7xl mx-auto px-6 lg:px-12 grid gap-12">
+    {/* Left Content */}
+    <motion.div
+      initial={{ opacity: 0, x: -60 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+      viewport={{ once: true }}
+    >
+     <motion.p
+  className="text-green-700 font-semibold text-sm tracking-wide uppercase mb-3 cursor-pointer hover:text-green-800 transition-colors"
+  initial={{ opacity: 0, y: -20 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ delay: 0.2, duration: 0.6 }}
+ 
+>
+  About Us
+</motion.p>
 
-        {/* Right Image */}
-        <div className="flex justify-center">
-          <img
-            src={aboutHero}
-            alt="About Compliance"
-            className="rounded-2xl shadow-lg object-cover w-full max-h-[400px]"
-          />
-        </div>
-      </section>
+
+      <motion.h1
+        className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-6"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.3, duration: 0.8 }}
+      >
+        State Approved{" "}
+        <span className="text-blue-600 bg-yellow-200 px-2 py-1 rounded">
+          ADA
+        </span>
+        <br />
+        Compliance Partner.
+      </motion.h1>
+
+      <motion.p
+        className="text-gray-600 mb-8 text-lg"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.5, duration: 0.8 }}
+      >
+       We’re a Minnesota-based State ADA vendor approved team dedicated to website accessibility. With legal insight and hands-on testing experience, we guide organizations in making their sites easier to use for people of all abilities. 
+<br>
+</br>
+<strong>Our founder Mike,a former attorney and operating paralegal ensures top compliance standards are at offer, giving us a unique perspective at the intersection of accessibility and business.
+</strong>
+      </motion.p>
+
+      <motion.button
+        className="px-6 py-3 rounded-md bg-green-700 text-white font-medium hover:bg-green-800 transition"
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
+        onClick={() => navigate("/contact", { state: { scrollToContact: true } })}
+      >
+        Learn More
+      </motion.button>
+    </motion.div>
+  </div>
+</section>
+
+
+
 
       {/* Section 2: What We Do */}
       <section className="bg-gray-50 py-16">
@@ -53,21 +88,21 @@ const About = () => {
           {/* Content */}
           <div>
             <h2 className="text-3xl font-bold text-gray-900 mb-6">
-              Simplifying Compliance for Every Business
+            Get Your Free Accessibility Scan Today
+
             </h2>
             <p className="text-gray-600 mb-6">
-              Compliance requirements vary across industries and regions —
-              whether it’s GDPR, HIPAA, ISO standards, or financial audits. Our
-              platform brings everything under one dashboard, reducing
-              complexity and ensuring that your organization stays audit-ready
-              at all times.
+            We help Minnesota businesses make their websites accessible, inclusive, and aligned with both federal ADA law and state requirements. As a state-approved ADA compliance vendor, we bring credibility and practical expertise to every project.
+Our mission is simple: to make accessibility approachable. We believe compliance is more than just avoiding legal risk—it’s about reaching more people, improving visibility, and giving every visitor a better online experience.
+We partner with businesses of all sizes, from local shops to public organizations, and guide them step by step without unnecessary complexity. With a focus on inclusion, professionalism, and long-term support, we’re here to ensure your website works for everyone.
+
             </p>
-            <ul className="space-y-4 text-gray-700">
+            {/* <ul className="space-y-4 text-gray-700">
               <li>✅ Centralized compliance documentation</li>
               <li>✅ Real-time monitoring and reporting</li>
               <li>✅ Easy integration with existing systems</li>
               <li>✅ Automated alerts for policy updates</li>
-            </ul>
+            </ul> */}
           </div>
         </div>
       </section>
