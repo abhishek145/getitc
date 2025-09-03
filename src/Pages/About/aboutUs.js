@@ -1,6 +1,6 @@
 import React from "react";
 import aboutHero from "../../assets/hexagon-6564551_1280.jpg";
-import complianceImg from "../../assets/business-7096914_1280.png";
+import complianceImg from "../../assets/reportingandaudit.jpg";
 import processImg from "../../assets/physics-3873118_1280.jpg";
 import trustImg from "../../assets/hands-5655424_1280.png";
 import { motion } from "framer-motion";
