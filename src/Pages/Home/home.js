@@ -1,7 +1,7 @@
 "use client";
-import heroImage from "../../assets/compliance-5899191_1280.jpg";
+import heroImage from "../../assets/lawsuits.jpg";
 import { motion } from "framer-motion";
-import aboutImage from "../../assets/man-5899192_1280.jpg"; 
+import aboutImage from "../../assets/reportingandaudit.jpg"; 
 import compliance1 from "../../assets/conflict-of-interest-7727331_1280.png";
 import compliance2 from "../../assets/ball-63527_1280.jpg";
 import compliance3 from "../../assets/man-76202_1280.jpg";
@@ -34,8 +34,8 @@ export default function Home() {
   ];
   const cards = [
     { id: 1, title: "Regulatory compliance", desc: "Being a state enforced regulation, being compliant with the latest regulations helps your business avoid a civil liability and improve consumer faith.", img: compliance1 },
-    { id: 2, title: "Data protection", desc: "Ensure latest WCAG regulations for your website and ongoing improvements with secure workflows.", img: compliance2 },
-    { id: 3, title: "Audit & Reporting", desc: "Automated reporting and real-time auditing to help you stay compliant and avoid penalties.", img: compliance3 },
+    { id: 2, title: "Data protection", desc: "Ensuring up-to-date compliance standards for your website with ongoing improvements and a secure workflow.", img: compliance2 },
+    { id: 3, title: "Audit & Reporting", desc: "Regularly scheduled scans and prompt documentation,all organised to achieve high compliance standards", img: compliance3 },
    
   ];
 
@@ -89,12 +89,12 @@ export default function Home() {
       <p className="text-green-600 font-semibold text-sm tracking-wide uppercase mb-3">
         Welcome To Get Into Compliance
       </p>
-      <h1 className="text-5xl md:text-6xl font-extrabold bg-gradient-to-r from-emerald-600 via-teal-500 to-sky-600 bg-clip-text text-transparent leading-tight mb-6">
-        Making Websites <br /> Accessible for Everyone
+      <h1 className="text-4xl md:text-4xl font-extrabold bg-gradient-to-r from-emerald-600 via-teal-500 to-sky-600 bg-clip-text text-transparent leading-tight mb-6">
+      983 ADA Lawsuits in Q1 2025 – Don’t Be Next.<br></br> Get Instant Website Compliance.
       </h1>
       <p className="text-gray-700 mb-8 text-lg">
-        We help businesses make their websites accessible to{" "}
-        <span className="font-semibold text-emerald-600">ALL.</span>
+      Automated, affordable, and fast compliance - no costly code fixes {" "}
+        <span className="font-semibold text-emerald-600">required.</span>
       </p>
 
       <motion.button
@@ -103,7 +103,7 @@ export default function Home() {
         whileTap={{ scale: 0.95 }}
         className="px-6 py-3 rounded-md bg-gradient-to-r from-emerald-600 via-teal-500 to-sky-600 text-white font-medium shadow-md hover:shadow-lg transition"
       >
-        Get your Free website accessibility check
+        Get Your Free Compliance Check
       </motion.button>
     </motion.div>
 
@@ -133,54 +133,60 @@ export default function Home() {
 
       {/* About & Mission */}
       <div className="bg-white py-16 px-6 lg:px-12 max-w-7xl mx-auto">
-  <div className="grid md:grid-cols-2 gap-12 items-center">
-    
-    {/* Text first on mobile, left on desktop */}
-    <motion.div
-      className="order-1 md:order-2" // <-- key change
-      initial={{ opacity: 0, x: 100 }}
+      <div className="grid md:grid-cols-2 gap-12 items-center">
+  {/* Text first on mobile, left on desktop */}
+  <motion.div
+    className="order-1 md:order-2"
+    initial={{ opacity: 0, x: 100 }}
+    whileInView={{ opacity: 1, x: 0 }}
+    viewport={{ once: true }}
+    transition={{ duration: 1 }}
+  >
+    <h2 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight mb-6">
+      Avoid lawsuits with a compliant, user-friendly website
+    </h2>
+    <p className="text-gray-600 mb-4">
+      Accessibility lawsuits are rapidly increasing, making compliance more important than ever. 
+      Protect your business by scanning your website today to uncover its accessibility status and 
+      take the first step toward reducing risk and building inclusivity.
+    </p>
+
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      {[
+        "Risk Mitigation – Avoid $5,000–$20,000 settlements with proactive compliance.",
+        "Market Expansion – Tap into the $490B U.S. disability market.",
+        "Simple & Affordable – No developer hours, no long contracts — just easy setup.",
+        "Always Updated – Stay compliant with evolving compliance and State accessibility laws."
+      ].map((value, i) => (
+        <motion.div
+          key={i}
+          className="flex items-start gap-2 text-gray-800"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.2 * i }}
+        >
+          <span className="text-green-600 text-lg">✔</span>
+          <span>{value}</span>
+        </motion.div>
+      ))}
+    </div>
+  </motion.div>
+
+  {/* Image after text on mobile */}
+  <div className="order-2 md:order-1">
+    <motion.img
+      src={aboutImage}
+      alt="About Compliance"
+      className="rounded-2xl shadow-lg mb-6 w-full"
+      initial={{ opacity: 0, x: -100 }}
       whileInView={{ opacity: 1, x: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 1 }}
-    >
-      <h2 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight mb-6">
-        Avoid lawsuits with a compliant, user-friendly website
-      </h2>
-      <p className="text-gray-600 mb-4">
-        Accessibility lawsuits are rapidly increasing, making compliance more important than ever. Protect your business by scanning your website today to uncover its accessibility status and take the first step toward reducing risk and building inclusivity.
-      </p>
-      
-      <div className="grid grid-cols-2 gap-4">
-        {["Automation", "Security", "Accuracy", "Transparency", "Efficiency"].map((value, i) => (
-          <motion.div
-            key={i}
-            className="flex items-center gap-2 text-gray-800"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.2 * i }}
-          >
-            <span className="text-green-600 text-lg">✔</span>
-            <span>{value}</span>
-          </motion.div>
-        ))}
-      </div>
-    </motion.div>
-
-    {/* Image after text on mobile */}
-    <div className="order-2 md:order-1">  {/* <-- key change */}
-      <motion.img
-        src={aboutImage}
-        alt="About Compliance"
-        className="rounded-2xl shadow-lg mb-6 w-full"
-        initial={{ opacity: 0, x: -100 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 1 }}
-      />
-    </div>
-
+    />
   </div>
+</div>
+
 </div>
 
 
@@ -215,7 +221,7 @@ export default function Home() {
       </div>
 
       {/* Features Section */}
-      <div className="bg-gray-50 py-16 px-6 lg:px-12 max-w-7xl mx-auto">
+      {/* <div className="bg-gray-50 py-16 px-6 lg:px-12 max-w-7xl mx-auto">
         <motion.div
           className="text-center mb-12"
           initial={{ opacity: 0, y: -40 }}
@@ -259,7 +265,7 @@ export default function Home() {
             </motion.div>
           ))}
         </div>
-      </div>
+      </div> */}
 
       {/* How It Works Section */}
       <div className="bg-white py-16 px-6 lg:px-12 max-w-7xl mx-auto">
@@ -275,9 +281,9 @@ export default function Home() {
         </motion.div>
         <div className="grid md:grid-cols-3 gap-10">
           {[
-            { step: 1, title: "Quick Review", desc: "We take an initial look at your site." },
-            { step: 2, title: "Practical Guidance", desc: "We point out what works well and what could improve." },
-            { step: 3, title: "Support Along the Way", desc: "We provide resources so your team can update confidently." },
+            { step: 1, title: " Connect your website (plugin/script/install)" },
+            { step: 2, title: "Automated scan + compliance layer applied"},
+            { step: 3, title: "Ongoing monitoring & compliance updates." },
           ].map((step, i) => (
             <motion.div
               key={i}

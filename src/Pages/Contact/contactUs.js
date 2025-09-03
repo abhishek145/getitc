@@ -22,15 +22,12 @@ const AboutPage = () => {
           About Our Compliance Solutions
         </h1>
         <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-          We build trusted compliance platforms that simplify regulatory
-          management for businesses of all sizes. Our mission is to ensure
-          organizations stay compliant, secure, and ahead in today’s evolving
-          regulatory landscape.
+        Have questions about ADA compliance or want to see how our solution can help your business? Our team is here to guide you. Leave us your details in the contact form listed below and we’ll get back to you promptly with clear answers, practical options, and the next steps to keep your website accessible and protected. No jargon, no pressure - just straightforward support
         </p>
       </section>
 
       {/* Section 1 */}
-      <section className="max-w-7xl mx-auto px-6 lg:px-12 py-16 grid md:grid-cols-2 gap-12 items-center">
+      {/* <section className="max-w-7xl mx-auto px-6 lg:px-12 py-16 grid md:grid-cols-2 gap-12 items-center">
         <img src={about1} alt="Compliance Solutions" className="rounded-xl shadow-lg" />
         <div>
           <h2 className="text-3xl font-bold mb-4">Our Mission</h2>
@@ -46,10 +43,10 @@ const AboutPage = () => {
             that keep your business safe and secure.
           </p>
         </div>
-      </section>
+      </section> */}
 
       {/* Section 2 */}
-      <section className="max-w-7xl mx-auto px-6 lg:px-12 py-16 grid md:grid-cols-2 gap-12 items-center">
+      {/* <section className="max-w-7xl mx-auto px-6 lg:px-12 py-16 grid md:grid-cols-2 gap-12 items-center">
         <div>
           <h2 className="text-3xl font-bold mb-4">Why Compliance Matters</h2>
           <p className="text-gray-600 mb-4">
@@ -65,10 +62,10 @@ const AboutPage = () => {
           </ul>
         </div>
         <img src={about2} alt="Why Compliance" className="rounded-xl shadow-lg" />
-      </section>
+      </section> */}
 
       {/* Section 3 */}
-      <section className="max-w-7xl mx-auto px-6 lg:px-12 py-16 grid md:grid-cols-2 gap-12 items-center">
+      {/* <section className="max-w-7xl mx-auto px-6 lg:px-12 py-16 grid md:grid-cols-2 gap-12 items-center">
         <img src={about3} alt="Future of Compliance" className="rounded-xl shadow-lg" />
         <div>
           <h2 className="text-3xl font-bold mb-4">The Future of Compliance</h2>
@@ -83,7 +80,7 @@ const AboutPage = () => {
             powerful enabler of growth, trust, and innovation.
           </p>
         </div>
-      </section>
+      </section> */}
 
       {/* Contact Us Section */}
       <section className="bg-gray-50 py-16 px-6 lg:px-12">

@@ -42,7 +42,7 @@ export default function Navigation() {
           onClick={() => navigate("/contact", { state: { scrollToContact: true } })}
           className="hidden md:block cursor-pointer transition duration-300 px-4 py-2 rounded-md bg-green-500 text-white hover:bg-green-600"
         >
-          Get Started
+          Free compliance audit-today
         </button>
 
         {/* Mobile Hamburger */}

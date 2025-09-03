@@ -46,17 +46,28 @@ const About = () => {
       </motion.h1>
 
       <motion.p
-        className="text-gray-600 mb-8 text-lg"
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.5, duration: 0.8 }}
-      >
-       We’re a Minnesota-based State ADA vendor approved team dedicated to website accessibility. With legal insight and hands-on testing experience, we guide organizations in making their sites easier to use for people of all abilities. 
-<br>
-</br>
-<strong>Our founder Mike,a former attorney and operating paralegal ensures top compliance standards are at offer, giving us a unique perspective at the intersection of accessibility and business.
-</strong>
-      </motion.p>
+  className="text-gray-600 mb-8 text-lg"
+  initial={{ opacity: 0, y: 40 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ delay: 0.5, duration: 0.8 }}
+>
+  We’re a Minnesota-based, state-approved ADA vendor dedicated to website accessibility. 
+  With legal insight and hands-on testing experience, we guide organizations in making their 
+  sites easier to use for people of all abilities.
+</motion.p>
+
+<motion.p
+  className="text-gray-600 mb-8 text-lg"
+  initial={{ opacity: 0, y: 40 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ delay: 0.7, duration: 0.8 }}
+>
+  <strong>
+    Our founder, a former attorney and operating paralegal, ensures top compliance standards, 
+    giving us a unique perspective at the intersection of accessibility and business.
+  </strong>
+</motion.p>
+
 
       <motion.button
         className="px-6 py-3 rounded-md bg-green-700 text-white font-medium hover:bg-green-800 transition"
@@ -87,23 +98,23 @@ const About = () => {
 
           {/* Content */}
           <div>
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">
-            Get Your Free Accessibility Scan Today
+  <h2 className="text-3xl font-bold text-gray-900 mb-6">
+    Get Your Free Accessibility Scan Today
+  </h2>
 
-            </h2>
-            <p className="text-gray-600 mb-6">
-            We help Minnesota businesses make their websites accessible, inclusive, and aligned with both federal ADA law and state requirements. As a state-approved ADA compliance vendor, we bring credibility and practical expertise to every project.
-Our mission is simple: to make accessibility approachable. We believe compliance is more than just avoiding legal risk—it’s about reaching more people, improving visibility, and giving every visitor a better online experience.
-We partner with businesses of all sizes, from local shops to public organizations, and guide them step by step without unnecessary complexity. With a focus on inclusion, professionalism, and long-term support, we’re here to ensure your website works for everyone.
+  <p className="text-gray-600 mb-4">
+    We help Minnesota businesses make their websites accessible, inclusive, and aligned with both federal ADA law and state requirements. As a state-approved ADA compliance vendor, we bring credibility and practical expertise to every project.
+  </p>
 
-            </p>
-            {/* <ul className="space-y-4 text-gray-700">
-              <li>✅ Centralized compliance documentation</li>
-              <li>✅ Real-time monitoring and reporting</li>
-              <li>✅ Easy integration with existing systems</li>
-              <li>✅ Automated alerts for policy updates</li>
-            </ul> */}
-          </div>
+  <p className="text-gray-600 mb-4">
+    Our mission is simple: to make accessibility approachable. We believe compliance is more than just avoiding legal risk—it’s about reaching more people, improving visibility, and giving every visitor a better online experience.
+  </p>
+
+  <p className="text-gray-600 mb-4">
+    We partner with businesses of all sizes, from local shops to public organizations, and guide them step by step without unnecessary complexity. With a focus on inclusion, professionalism, and long-term support, we’re here to ensure your website works for everyone.
+  </p>
+</div>
+
         </div>
       </section>
 

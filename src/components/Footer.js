@@ -13,7 +13,7 @@ export default function Footer() {
           <div>
             <h2 className="text-2xl font-bold text-white">Get Into Compliance</h2>
             <p className="mt-3 text-sm text-gray-400">
-            APT 105 19000 STRATFORD RD MINNETONKA, MN 55345-4046 USA
+            Suite 105 19000 STRATFORD RD MINNETONKA, MN 55345-4046 USA
             </p>
           </div>
 
