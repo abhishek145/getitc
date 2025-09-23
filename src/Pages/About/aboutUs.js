@@ -63,7 +63,7 @@ const About = () => {
   transition={{ delay: 0.7, duration: 0.8 }}
 >
   <strong>
-    Our founder, a former attorney and operating paralegal, ensures top compliance standards, 
+    Our founder, ensures top compliance standards, 
     giving us a unique perspective at the intersection of accessibility and business.
   </strong>
 </motion.p>
